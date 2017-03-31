@@ -1,0 +1,13 @@
+# Mac OS X
+*.DS_Store
+
+# MacTeX generated files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*Notes.bib
+# .pdf file is configured per branch
+report.pdf
