@@ -1,0 +1,131 @@
+\documentclass[twoside, 11pt, tablecaption=bottom]{article}
+
+% Any additional packages needed should be included after jmlr2e.
+% Note that jmlr2e.sty includes epsfig, amssymb, natbib and graphicx,
+% and defines many common macros, such as 'proof' and 'example'.
+%
+% It also sets the bibliographystyle to plainnat; for more information on
+% natbib citation styles, see the natbib documentation, a copy of which
+% is archived at http://www.jmlr.org/format/natbib.pdf
+
+\usepackage{jmlr2e}
+
+% Definitions of handy macros can go here
+
+% For algorithms
+\usepackage[ruled, linesnumbered, lined]{algorithm2e}
+
+% For no line number
+\let\oldnl\nl	% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}	% Remove line number for one line
+
+% For boldface in algorithms
+\usepackage{bm}
+
+% For \begin{align}
+\usepackage{amsmath}
+
+% For real number domain \mathds{R}^n
+\usepackage{dsfont}
+
+% For color text
+\usepackage[usenames, dvipsnames]{xcolor}
+
+% For Courier font: \texttt{}
+\usepackage{courier}
+
+% The booktabs package is used by this sample document
+% (it provides \toprule, \midrule and \bottomrule).
+% Remove the next line if you don't require it.
+\usepackage{booktabs}
+% The siunitx package is used by this sample document
+% to align numbers in a column by their decimal point.
+% Remove the next line if you don't require it.
+\usepackage[load-configurations=version-1]{siunitx} % newer version
+%\usepackage{siunitx}
+
+% For graphics array
+\usepackage{graphicx}
+
+% For strikeout text
+\usepackage{soul}
+%usage: st{text}
+
+% Include the path to the folder of figures
+\graphicspath{{figures/}}
+
+%%%
+
+\newcommand{\bb}[1]{\boldsymbol{#1}}
+
+%%%
+
+\newcommand{\dataset}{{\cal D}}
+\newcommand{\fracpartial}[2]{\frac{\partial #1}{\partial  #2}}
+
+% Heading arguments are {volume}{year}{pages}{submitted}{published}{author-full-names}
+
+\jmlrheading{0}{0000}{00-00}{mn/yr}{mn/yr}{Yu-Hsiang Lin, Ramona Lu}
+
+% Short headings should be running head and authors last names
+
+\ShortHeadings{[OS 2017 Spring] Project 1 Report}{Lin, Lu}
+\firstpageno{1}
+
+\begin{document}
+
+% I put the date for reports
+\today
+
+\title{[OS 2017 Spring] Project 1 Report}
+
+\author{%
+	\name Yu-Hsiang Lin \email hitr2997925@gmail.com \\
+	\addr Department of Physics\\
+	National Taiwan University\\
+	Taipei 10617, Taiwan
+	\AND
+	\name Ramona Lu \email ramonalu37@gmail.com \\
+	\addr Department of Computer Science and Information Engineering\\
+	National Taiwan University\\
+	Taipei 10617, Taiwan
+}
+
+%\editor{Editor}
+
+\maketitle
+
+%\begin{abstract}%   <- trailing '%' for backward compatibility of .sty file
+%Abstract.
+%\end{abstract}
+
+%\begin{keywords}
+%  Keywords
+%\end{keywords}
+
+
+
+% ---------------------------------------------------------------
+
+% Two types of citing:
+% As noun: Martens (2010) did this and that: \cite{JM10a}
+% As reference: They did this and that (Martens, 2010): \citep{JM10a}
+
+
+
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+
+\section{Linux kernel building}
+
+	Build the Linux kernel.
+
+
+
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+
+\vskip 0.2in
+%\bibliography{sdp,additional}
+
+\end{document}
