@@ -1,0 +1,8 @@
+table:
+sudo vim /usr/src/linux-2.6.32.60/arch/x86/kernel/syscall_table_32.S
+macro:
+sudo vim /usr/src/linux-2.6.32.60/arch/x86/include/asm/unistd_32.h
+sudo vim /usr/src/linux-2.6.32.60/arch/x86/include/asm/syscalls.h
+source:
+sudo vim /usr/src/linux-2.6.32.60/kernel/[call].c
+sudo vim /usr/src/linux-2.6.32.60/kernel/Makefile
