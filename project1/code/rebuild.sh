@@ -12,7 +12,7 @@ read -p 'Enter the number of cores you want to use for rebuild: ' ncore
 
 # Copy files to their directories
 sudo cp -t ${dir}/arch/x86/kernel/ syscall_table_32.S
-sudo cp -t ${dir}/arch/x86/include/asm/ syscall_table_32.S syscall_table_32.S
+sudo cp -t ${dir}/arch/x86/include/asm/ unistd_32.h syscalls.h
 sudo cp -t ${dir}/kernel/ Makefile Show.c Multiply.c Min.c \
 	returnzero.c CPU_Utilization.c
 
