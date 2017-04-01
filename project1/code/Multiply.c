@@ -1,7 +1,7 @@
 #include<linux/kernel.h>
 #include<linux/linkage.h>
 
-asmlinkage long sys_Multiply(const long a, const long b)
+asmlinkage double sys_Multiply(const double a, const double b)
 {
 	return a*b;
 }

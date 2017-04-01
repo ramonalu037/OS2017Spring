@@ -7,18 +7,17 @@ int main() {
 	syscall(337);
 	
 	// Multiply
-	long a = 2;
-	long b = 3;
-	long res = syscall(338, a, b);
-	printf("%ld * %ld = %ld\n", a, b, res);
+	double a = 0.4;
+	double b = -1.2;
+	double res = syscall(338, a, b);
+	printf("%.3f * %.3f = %.3f\n", a, b, res);
 	
 	// Min
 	res = syscall(339, a, b);
-	printf("min(%ld, %ld) = %ld\n", a, b, res);
+	printf("min(%.3f, %.3f) = %.3f\n", a, b, res);
 	
 	// CPU_Utilization
-	res = syscall(341);
-	printf("CPU utilization = %ld\n", res);
+	syscall(341);
 	
 	return 0;
 }

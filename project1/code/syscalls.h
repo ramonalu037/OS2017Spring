@@ -93,9 +93,9 @@ asmlinkage long sys_uname(struct new_utsname __user *);
 
 asmlinkage long sys_Show(void);
 
-asmlinkage long sys_Multiply(const long, const long);
+asmlinkage double sys_Multiply(const double, const double);
 
-asmlinkage long sys_Min(const long, const, long);
+asmlinkage double sys_Min(const double, const, double);
 
 asmlinkage long sys_returnzero(void);
 
