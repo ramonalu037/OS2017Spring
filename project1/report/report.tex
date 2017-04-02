@@ -69,7 +69,7 @@
 
 % Short headings should be running head and authors last names
 
-\ShortHeadings{[OS 2017 Spring] Project 1 Report}{Lin, Lu}
+\ShortHeadings{[OS 2017 Spring] Project 1 Report, Team 33}{Lin, Lu}
 \firstpageno{1}
 
 \begin{document}
@@ -116,11 +116,47 @@
 % ---------------------------------------------------------------
 % ---------------------------------------------------------------
 
-\section{Linux kernel building}
+\section{Building Linux kernel}
 
-	Build the Linux kernel.
+	We follow the procedure in the slides of Project 1 to build the Linux kernel. The physical machine is MacBook Pro (2011) with macOS 10.12.4. We first set up the VirtualBox environment running Ubuntu 12.04.5 with its original Linux kernel 3.13.0. Then we built the Linux kernel 2.6.32.60 in Ubuntu, and rebooted using this kernel.
 	
-	We built a Linux kernel. Again. Again. Again.
+	\emph{Support multicore}---To facilitate multicore utilization in VirtualBox environment, we need to tweak the VirtualBox settings by enabling the I/O APIC and setting the number of processors to 8 (our CPU has 4 physical cores). Then the ``make -j8'' command will work effectively.
+	
+	\emph{Resize Ubuntu window}---With only the vanilla VirtualBox installed, the Ubuntu window was fixed to a size that was too small to show the entire desktop (or any application window). To resize the window, we also installed the ``guest additions'' by
+	
+		\texttt{sudo apt-get install virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11}
+
+
+
+% ---------------------------------------------------------------
+% ---------------------------------------------------------------
+
+\section{System call implementation}
+
+	System calls Show, Multiply, and Min are implemented. System call Show (Show.c) is implemented by calling printk, and print the student ID numbers and names of the team members into the kernel log. The result is then shown by calling dmesg and inspect the bottom lines of the kernel message buffer. System call Multiply (Multiply.c) is implemented by multiplying two input long integers and returning the result. System call Min (Min.c) is implemented by comparing the two input long integers and returning the smaller one.
+	
+	We wrote a test program (test.c) to perform the test of the 3 system calls implemented. In the test program, we first call Show, expecting its result in the kernel message buffer. Then we define two arbitrary long integers, and call Multiply and Min with them as the input arguments. We catch the outputs of Multiply and Min, and show them on the screen by printf. Figures \ref{fig:test} and \ref{fig:dmesg} show the results of running our test program.
+
+% -----------------------------------------------------------------------
+
+\begin{figure}
+\centering
+\includegraphics[width = 15 cm]{test}
+\caption{Run the test program.}
+\label{fig:test}
+\end{figure}
+
+% -----------------------------------------------------------------------
+
+\begin{figure}
+\centering
+\includegraphics[width = 15 cm]{dmesg}
+\caption{The bottom lines of the output of dmesg.}
+\label{fig:dmesg}
+\end{figure}
+
+% -----------------------------------------------------------------------
+
 
 
 
