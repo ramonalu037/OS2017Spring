@@ -7,8 +7,8 @@ int main() {
 	syscall(337);
 	
 	// Multiply
-	double a = 0.4;
-	double b = -1.2;
+	double a = 0.6;
+	double b = 1.2;
 	double res = syscall(338, a, b);
 	printf("%.3f * %.3f = %.3f\n", a, b, res);
 	
