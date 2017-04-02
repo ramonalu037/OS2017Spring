@@ -340,4 +340,3 @@ ENTRY(sys_call_table)
 	.long sys_Multiply
 	.long sys_Min
 	.long sys_returnzero		/* 340 */
-	.long sys_CPU_Utilization

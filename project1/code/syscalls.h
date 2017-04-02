@@ -99,7 +99,5 @@ asmlinkage long sys_Min(const long, const, long);
 
 asmlinkage long sys_returnzero(void);
 
-amslinkage long sys_CPU_Utilization(void);
-
 #endif /* CONFIG_X86_32 */
 #endif /* _ASM_X86_SYSCALLS_H */
