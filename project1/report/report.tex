@@ -125,6 +125,8 @@
 	\emph{Resize Ubuntu window}---With only the vanilla VirtualBox installed, the Ubuntu window was fixed to a size that was too small to show the entire desktop (or any application window). To resize the window, we also installed the ``guest additions'' by
 	
 		\texttt{sudo apt-get install virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11}
+	
+	\emph{Convenient rebuild}---To make the process of kernel rebuild easier, we wrote a shell script, rebuild.sh, to copy the modified files into their original directories, and execute the rebuild commands. The number of cores to use for the rebuild is specified in the screen prompt.
 
 
 
@@ -133,7 +135,7 @@
 
 \section{System call implementation}
 
-	System calls Show, Multiply, and Min are implemented. System call Show (Show.c) is implemented by calling printk, and print the student ID numbers and names of the team members into the kernel log. The result is then shown by calling dmesg and inspect the bottom lines of the kernel message buffer. System call Multiply (Multiply.c) is implemented by multiplying two input long integers and returning the result. System call Min (Min.c) is implemented by comparing the two input long integers and returning the smaller one.
+	System calls Show, Multiply, and Min are implemented. System call Show (Show.c) is implemented by calling printk, and print the student ID numbers and names of the team members into the kernel log. The result is then shown by calling dmesg and inspect the bottom lines of the kernel message buffer. System call Multiply (Multiply.c) is implemented by multiplying two input long integers and returning the result. System call Min (Min.c) is implemented by comparing the two input long integers and returning the smaller one. System call returnzero (returnzero.c), number 340, is added, in case we add more system calls to the kernel.
 	
 	We wrote a test program (test.c) to perform the test of the 3 system calls implemented. In the test program, we first call Show, expecting its result in the kernel message buffer. Then we define two arbitrary long integers, and call Multiply and Min with them as the input arguments. We catch the outputs of Multiply and Min, and show them on the screen by printf. Figures \ref{fig:test} and \ref{fig:dmesg} show the results of running our test program.
 

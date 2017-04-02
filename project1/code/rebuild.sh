@@ -1,10 +1,10 @@
 #!/bin/bash
-# Rebuild Ubuntu2.6.32.60
+# Rebuild Linux kernel 2.6.32.60
 # Assuming already made "menuconfig"
 # Will not update grub
 # Will not shutdown and reboot
 
-# Directory of Ubuntu source files
+# Directory of Linux kernel source files
 dir=/usr/src/linux-2.6.32.60
 
 # Enter the number of cores to use
