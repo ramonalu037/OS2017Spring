@@ -16,6 +16,9 @@ int main() {
 	res = syscall(339, a, b);
 	printf("min(%ld, %ld) = %ld\n", a, b, res);
 	
+	// CPU_Utilization
+	syscall(341);
+	
 	return 0;
 }
 

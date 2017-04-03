@@ -346,10 +346,11 @@
 #define __NR_Multiply		338
 #define __NR_Min		339
 #define __NR_returnzero		340
+#define __NR_CPU_Utilization	341
 
 #ifdef __KERNEL__
 
-#define NR_syscalls 341
+#define NR_syscalls 342
 
 #define __ARCH_WANT_IPC_PARSE_VERSION
 #define __ARCH_WANT_OLD_READDIR

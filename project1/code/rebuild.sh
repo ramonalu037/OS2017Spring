@@ -14,7 +14,7 @@ read -p 'Enter the number of cores you want to use for rebuild: ' ncore
 sudo cp -t ${dir}/arch/x86/kernel/ syscall_table_32.S
 sudo cp -t ${dir}/arch/x86/include/asm/ unistd_32.h syscalls.h
 sudo cp -t ${dir}/kernel/ Makefile Show.c Multiply.c Min.c \
-	returnzero.c
+	returnzero.c CPU_Utilization.c
 
 # Rebuild
 sudo make -j${ncore} -C ${dir} bzImage
