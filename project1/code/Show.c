@@ -3,8 +3,7 @@
 
 asmlinkage long sys_Show(void)
 {
-	printk("Ok, try this\nAnd this\n");
-
+	printk("Again\nGit git git\n");
 	
 	return 0;
 }
