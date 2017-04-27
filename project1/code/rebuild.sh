@@ -18,6 +18,6 @@ sudo cp -t ${dir}/kernel/ Makefile Show.c Multiply.c Min.c \
 
 # Rebuild
 sudo make -j${ncore} -C ${dir} bzImage
-sudo make -j${ncore} -C ${dir} modules
-sudo make -j${ncore} -C ${dir} modules_install
+#sudo make -j${ncore} -C ${dir} modules
+#sudo make -j${ncore} -C ${dir} modules_install
 sudo make -j${ncore} -C ${dir} install

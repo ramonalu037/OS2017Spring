@@ -7,8 +7,8 @@ int main() {
 	syscall(337);
 	
 	// Multiply
-	long a = 2;
-	long b = 3;
+	long a = 52;
+	long b = 385;
 	long res = syscall(338, a, b);
 	printf("%ld * %ld = %ld\n", a, b, res);
 	
