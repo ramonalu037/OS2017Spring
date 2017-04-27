@@ -10,6 +10,8 @@
 
 asmlinkage long sys_CPU_Utilization(void)
 {
+	printk("hi\n");
+
 	int input_fd;
 	ssize_t ret_in;
 	const long buffer_size = 10000;
@@ -19,7 +21,7 @@ asmlinkage long sys_CPU_Utilization(void)
 	unsigned long long int ioWait, irq, softIrq, steal, guest;
 	unsigned long long int busyalltime, idlealltime, totaltime;
 	
-	input_fd = open('/proc/stat', O_RDONLY);
+	input_fd = open("/proc/stat", O_RDONLY);
 	
 	while( ( ret_in = read(input_fd, &buffer, buffer_size) ) > 0 ) {
 		sscanf(buffer, "cpu  %16llu %16llu %16llu %16llu %16llu %16llu %16llu %16llu", &usertime, &nicetime, &systemtime, &idletime, &ioWait, &irq, &softIrq, &steal, &guest);
@@ -62,6 +64,8 @@ asmlinkage long sys_CPU_Utilization(void)
 	printk("busyalltime = %llu, totaltime = %llu\n", busyalltime, totaltime);
 	
 	printk("busyalltime2 = %llu, totaltime2 = %llu\n", busyalltime2, totaltime2);
+	
+	printk("hi\n");
 	
 	return 0;
 }
